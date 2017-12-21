@@ -1,0 +1,7 @@
+npm install (loads from package.json)
+npm install [file] --save (loads and puts into packag.json - note you need to start with empty pack)
+npm uninstall [file] --save
+npm install -g webpack (loads js code to your global node directory. Good idea.)
+
+webpack
+webpack --watch
