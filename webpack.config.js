@@ -1,7 +1,6 @@
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
-// const path = require('path')
-//
-// var cssConfig = {
+const path = require('path')
+
+// const cssConfig = {
 //   entry: './style.js',
 //   output: {
 //     path: path.resolve(__dirname, 'dist'),
@@ -20,21 +19,18 @@
 //         })
 //       }
 //     ]
-//   },
-//   plugins: [
-//     new ExtractTextPlugin('styles.css')
-//   ]
+//   }
 // }
-//
-// var {
-//     entry: "./index.js",
-//     output: {
-//        path: path.resolve(__dirname, 'dist'),
-//        filename: "bundle.js"
-//     },
-// }
-//
-// // Return Array of Configurations
-// module.exports = [
-//     cssConfig, jsConfig,
-// ];
+
+const jsConfig = {
+    entry: "./javascript/main.js",
+    output: {
+       path: path.resolve('./built'),
+       filename: "bundle.js"
+    },
+}
+
+// Return Array of Configurations
+module.exports = [
+    jsConfig
+]

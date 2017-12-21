@@ -1,1 +1,3 @@
-console.log('main js file loaded')
+const yolo = require('./yolo')
+
+yolo()
