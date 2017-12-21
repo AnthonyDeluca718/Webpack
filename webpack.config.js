@@ -1,26 +1,26 @@
 const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-// const cssConfig = {
-//   entry: './style.js',
-//   output: {
-//     path: path.resolve(__dirname, 'dist'),
-//     filename: 'bundle.css',
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.css$/,
-//         use: ExtractTextPlugin.extract({
-//           fallback: 'style-loader',
-//           use: [
-//             { loader: 'css-loader', options: { importLoaders: 1 } },
-//             'postcss-loader'
-//           ]
-//         })
-//       }
-//     ]
-//   }
-// }
+// This config assumes all CSS is in .scss files
+
+const cssConfig = {
+    entry: './css/main.scss',
+    output: {
+        path: path.resolve('./built'),
+        filename: 'bundle.css',
+    },
+    module: {
+        rules: [
+            { // sass / scss loader for webpack. 
+                test: /\.(sass|scss)$/,
+                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin("bundle.css")
+    ]
+}
 
 const jsConfig = {
     entry: "./javascript/main.js",
@@ -32,5 +32,5 @@ const jsConfig = {
 
 // Return Array of Configurations
 module.exports = [
-    jsConfig
+    jsConfig, cssConfig
 ]
