@@ -68,11 +68,11 @@
 /***/ (function(module, exports) {
 
 function cash () {
-    console.log('Cash')
+    console.log('CASH')
 }
 
 function money () {
-    console.log('Money')
+    console.log('MONEY')
 }
 
 module.exports = {
@@ -101,7 +101,7 @@ const cash = __webpack_require__(0).cash
 const money = __webpack_require__(0).money
 
 function yolo () {
-    console.log('Yolo')
+    console.log('YOLO')
     cash()
     money()
 }

@@ -1,9 +1,9 @@
 function cash () {
-    console.log('Cash')
+    console.log('CASH')
 }
 
 function money () {
-    console.log('Money')
+    console.log('MONEY')
 }
 
 module.exports = {

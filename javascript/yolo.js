@@ -2,7 +2,7 @@ const cash = require('./cashMoney').cash
 const money = require('./cashMoney').money
 
 function yolo () {
-    console.log('Yolo')
+    console.log('YOLO')
     cash()
     money()
 }
